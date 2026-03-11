@@ -1,6 +1,7 @@
 import streamlit as st
 import requests
 from loguru import logger
+import json
 
 st.set_page_config(page_title="Brief-2", layout="centered")
 
@@ -16,23 +17,22 @@ if "messages" not in st.session_state:
 
 def draw_assistant_message(msg):
     with st.chat_message("assistant"):
-        st.write(msg["content"])
-        with st.expander("Analyse"):
-            st.write(f"Traduction : {msg['translation']}")
-            st.write(f"Sentiment : {msg['sentiment']} (Score: {msg['score']})")
+        st.write(f"Réponse : {msg['response']}")
+        st.write(f"Traduction : {msg['translation']}")
+        st.write(f"Sentiment : {msg['sentiment']} (Score: {msg['score']})")
 
 for msg in st.session_state.messages:
     if msg["role"] == "user":
         with st.chat_message("user"):
-            st.write(msg["content"])
+            st.write(msg["response"])
     else:
         draw_assistant_message(msg)
 
 user_input = st.chat_input("Écrivez votre message ici...")
 
 if user_input:
-    logger.info(f"Message recu : {user_input}")
-    st.session_state.messages.append({"role": "user", "content": user_input})
+    logger.debug(f"Message envoyé a l'API (user_input): {user_input}")
+    st.session_state.messages.append({"role": "user", "response": user_input})
     with st.chat_message("user"):
         st.write(user_input)
 
@@ -42,11 +42,11 @@ if user_input:
         if response.status_code == 200:
             data = response.json()
 
-            logger.info(f"Reponse generé : {data}")
+            logger.debug(f"Reponse recu : \n {json.dumps(data, indent=4)}")
 
             msg = {
                 "role": "assistant",
-                "content": data["response"],
+                "response": data["response"],
                 "translation": data["translation"],
                 "sentiment": data["sentiment"],
                 "score": data["score"]
