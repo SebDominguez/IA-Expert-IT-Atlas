@@ -1,0 +1,1 @@
+# Brief 2 - Intégration d'une IA simple dans une Application Web - Un défi un peu plus compliqué
