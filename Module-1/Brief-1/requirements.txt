@@ -1,0 +1,4 @@
+pandas
+mlflow
+scikit-learn==1.6.1
+protobuf<5.0.0,>=3.20.3
