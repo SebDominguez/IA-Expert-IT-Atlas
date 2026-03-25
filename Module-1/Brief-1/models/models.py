@@ -8,6 +8,7 @@ def create_nn_model(input_dim):
     model = Sequential()
     model.add(Dense(64, activation='relu', input_dim=input_dim))
     model.add(Dense(32, activation='relu'))
+    model.add(Dense(16, activation='relu'))
     model.add(Dense(1))
     model.compile(optimizer='adam', loss='mse')
     return model

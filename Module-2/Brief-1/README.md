@@ -30,3 +30,10 @@ Au lieu d'utiliser un remplacement simple par la moyenne ou la médiane (ce qui 
 - **Paramètres :** `k=5` voisins.
 - **Processus :** Chaque `NaN` (qu'il soit d'origine ou créé lors de nos étapes de nettoyage) est remplacé par une valeur calculée en fonction des 5 profils les plus similaires dans le jeu de données.
 - **Résultat :** Cela garantit qu'une valeur de "revenu" manquante est estimée à l'aide de données connexes comme "l'âge" ou le "montant du prêt", maintenant une cohérence logique dans tout le fichier.
+
+### Visualisation des données manquantes (Avant nettoyage)
+![Matrice Missingno Initiale](./img/original.png)
+
+### Distribution des revenus (Après traitement des Outliers)
+![Matrice Missingno Finale](./img/cleaned.png)
+
