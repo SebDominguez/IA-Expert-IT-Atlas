@@ -16,15 +16,15 @@ Risque de discrimination selon l'origine
 
 `niveau_etude`
 
-Aucun risque
+Aucun risque, ou peut servir à déterminer une origine sociale (à surveiller).
 
 `region`
 
-Peut etre utilisé comme proxy pour determiner une origine social
+Peut être utilisé comme proxy pour déterminer une origine sociale.
 
 `age`
 
-Aucun risque éthique identifié / ou peut être discriminant
+Aucun risque éthique identifié ou peut être discriminant. Si l'âge est considéré comme discriminant, il faut faire attention à date_creation_compte qui peut être utilisé comme proxy.
 
 `revenu`
 
