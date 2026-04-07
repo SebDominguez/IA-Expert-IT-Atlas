@@ -33,4 +33,3 @@ Aucun risque éthique identifié
 `loyer`
 
 Aucun risque éthique identifié
-

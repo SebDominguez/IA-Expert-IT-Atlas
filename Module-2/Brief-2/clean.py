@@ -29,7 +29,10 @@ df_nettoye.to_csv('./data/nettoye.csv', index=False)
 
 # --- 3. GÉNÉRATION DU FICHIER "ÉTHIQUE" (V2 RESPONSABLE) ---
 # On repart de l'original mais on SUPPRIME les données sensibles AVANT transformation
-colonnes_sensibles = ['nom', 'prenom', 'sexe', 'nationalité_francaise', 'date_creation_compte', 'niveau_etude']
+# colonnes_sensibles = ['nom', 'prenom', 'sexe', 'nationalité_francaise', 'date_creation_compte', 'niveau_etude']
+
+colonnes_sensibles = ['nom', 'prenom', 'sexe', 'nationalité_francaise']
+
 df_ethique_raw = df.drop(columns=colonnes_sensibles)
 
 # Encodage uniquement des colonnes autorisées (on a enlevé sexe et nationalité)
@@ -40,3 +43,4 @@ df_ethique.to_csv('./data/ethique.csv', index=False)
 
 print("'nettoye.csv' crée.")
 print("'ethique.csv' crée.")
+
