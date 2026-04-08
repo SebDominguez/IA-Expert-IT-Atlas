@@ -1,0 +1,13 @@
+services:
+  db:
+    image: postgres:15 # On fixe une version stable
+    container_name: postgres
+    restart: always
+    environment:
+      POSTGRES_USER: python
+      POSTGRES_PASSWORD: python123
+      POSTGRES_DB: db
+    ports:
+      - "5432:5432"
+    volumes:
+      - ./postgres_data:/var/lib/postgresql/data
