@@ -1,0 +1,27 @@
+# data manipulation
+pandas
+numpy
+
+# machine learning and preprocessing stuff
+scikit-learn==1.4.0
+joblib
+
+# SQL stuff (ORM)
+SQLAlchemy
+alembic
+psycopg2-binary
+
+# API
+fastapi
+uvicorn
+pydantic
+python-multipart
+
+# report
+missingno
+matplotlib
+
+mlflow
+tensorflow
+
+
