@@ -1,0 +1,24 @@
+# data read
+pandas
+numpy
+
+# nettoyage et prep data
+seaborn
+pandas
+numpy
+scikit-learn==1.4.0
+
+# entrainement
+mlflow
+tensorflow
+
+# model
+lightgbm
+
+# pour que cette merde de python arrete de gueuler parce quil trouve pas distutils
+setuptools
+
+
+# visualisation
+missingno
+matplotlib
