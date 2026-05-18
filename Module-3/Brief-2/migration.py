@@ -2,15 +2,14 @@ import pandas as pd
 from app.database import SessionLocal, engine
 from app.models import User, Finance
 
-# 1. Créer une session pour parler à la base
 db = SessionLocal()
 
-# 2. Charger ton CSV propre
 df = pd.read_csv("./resources/cleaned_data.csv", parse_dates=['date_creation_compte'])
 print(f"Début de la migration de {len(df)} lignes...")
 
 try:
     for index, row in df.iterrows():
+
         # 3. Création conditionnelle de l'objet Finance
         # On vérifie si les colonnes financières ne sont pas vides (NaN)
 

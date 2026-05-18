@@ -156,3 +156,6 @@ resultat:
 ![loss-val](./img/loss-val_loss.png)
 
 *Image générée via MLflow Autolog*
+
+
+

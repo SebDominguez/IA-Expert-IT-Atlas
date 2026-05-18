@@ -5,7 +5,6 @@ from app.models import User, Finance
 # 1. Créer une session pour parler à la base
 db = SessionLocal()
 
-# 2. Charger ton CSV propre
 df = pd.read_csv("./resources/cleaned_data.csv", parse_dates=['date_creation_compte'])
 print(f"Début de la migration de {len(df)} lignes...")
 
