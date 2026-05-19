@@ -1,0 +1,16 @@
+# data read & manipulation
+pandas
+numpy
+
+# visualisation
+matplotlib
+seaborn
+
+# clustering, regretion logistique, métriques
+scikit-learn
+
+# CNN
+tensorflow
+
+# pour que cette merde de python arrete de gueuler parce quil trouve pas distutils
+setuptools
